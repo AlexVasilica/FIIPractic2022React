@@ -11,7 +11,7 @@ body{
 }
 
 #searchbar{
-      background-image: url(https://img.icons8.com/ios/344/search--v1.png);
+    background-image: url(https://img.icons8.com/ios/344/search--v1.png);
     background-size: 28px;
     color: rgb(78, 77, 80);
     font-size: 16px;
@@ -34,3 +34,20 @@ body{
   font-size:50px;
   margin-top: 50px;
 }
+
+.pokemonCard{
+  display: flex;
+  justify-content: flex-wrap;
+  margin-top: 50px;
+  background-color: green;
+  border-color: black;
+  border-radius: 50px;
+}
+#text{
+  color:rgb(245, 245, 245);
+  padding: 15px;
+}
+ .pokemon{
+  width: 225px;
+  height: 270px;
+ }

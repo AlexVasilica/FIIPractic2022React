@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import JSONDATA from "./data.json";
 import { useState } from "react";
-
+ 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
   return (
@@ -19,18 +19,24 @@ function App() {
          if(searchTerm === "") {
            return val;
          } else if (val.name.toLowerCase().includes(searchTerm.toLowerCase())){
-           return val 
-         }
+           return val;}
+        //  } else if (val.id.includes(searchTerm)){
+        //    return val;
+        //  }
+
        })
        .map((val, key) => {
         return (
-          <div className="user" key={key}>
-            <p>{val.name}</p>
+          <div className="pokemonCard" key={key}>
+            <p id='text'>{val.name +  ' ' + val.id + ' ' + val.types.type}</p>
+            <img className="pokemon" src={val.sprites.other.official_artwork.front_default} alt="Pokemon" />
           </div>       
         );
       })}
     </div>
   );
 }
+
+
 
 export default App;
