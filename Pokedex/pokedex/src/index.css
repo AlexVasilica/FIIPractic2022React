@@ -5,9 +5,10 @@ body{
 
 .App{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 #searchbar{
@@ -36,17 +37,21 @@ body{
 }
 
 .pokemonCard{
+  width: 500px;
+  height: 270px;
   display: flex;
-  justify-content: flex-wrap;
+  justify-content: flex-end;
   margin-top: 50px;
   background-color: green;
   border-color: black;
   border-radius: 50px;
 }
+
 #text{
   color:rgb(245, 245, 245);
-  padding: 15px;
+  padding: 25px;
 }
+
  .pokemon{
   width: 225px;
   height: 270px;

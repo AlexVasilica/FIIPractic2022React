@@ -14,7 +14,7 @@ function App() {
         onChange={(event) => {
           setSearchTerm(event.target.value);
         }}
-      />
+        />
       {JSONDATA.filter(val => {
          if(searchTerm === "") {
            return val;
@@ -28,7 +28,9 @@ function App() {
        .map((val, key) => {
         return (
           <div className="pokemonCard" key={key}>
-            <p id='text'>{val.name +  ' ' + val.id + ' ' + val.types.type}</p>
+            <b id='text'>{val.name}</b>
+            <b id='text'>{val.id}</b>
+            <b id='text'>{val.types.slot}</b>
             <img className="pokemon" src={val.sprites.other.official_artwork.front_default} alt="Pokemon" />
           </div>       
         );
